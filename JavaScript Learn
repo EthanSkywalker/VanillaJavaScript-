@@ -51,3 +51,11 @@ const minus = calculator.minus(5,5);
 console.log(plus);
 console.log(minus);
 
+querySelector 는 element 의 자식을 탐색 함.
+const clockContainer = documnet.querySelector(".js-clock"); 
+const clockTitle = clockContainer.querySelector("h1");
+
+js-clock 의 h1 태그를 가져옴 
+
+setInterval(fn, 1000) // 적용할 함수 , 함수를 실행할 시간.
+반복하는 것 임. 
