@@ -18,7 +18,7 @@ function handleSubmit(event){
 
 function askForName(){
     form.classList.add(SHOWING_CN);
-    form.addEventListener("submit",handleSubmit);   // submit 이 동작되었을 때 이벤트를 막음.
+    form.addEventListener("submit",handleSubmit);   // submit 이 동작되었을 때 새로고침을 막음.
 }
 
 function paintGreeting(text){
