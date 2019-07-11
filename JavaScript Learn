@@ -59,3 +59,22 @@ js-clock 의 h1 태그를 가져옴
 
 setInterval(fn, 1000) // 적용할 함수 , 함수를 실행할 시간.
 반복하는 것 임. 
+
+
+function paintToDo(text){
+   const li = document.createElement("li"); //li 라는 태그를 만드는 자바스크립트
+   const delBtn = document.createElement("button"); //button 을 만드는 자바스크립트
+   delBtn.value = "❌"
+   const span = document.createElement("span");
+   span.innerText = text;
+   li.appendChild(span);  // li 라는 태그안에 span 태그를 추가
+   li.appendChild(delBtn);
+   toDoList.appendChild(li); 
+}
+
+JSON 이란 데이터를 전달 할 때 자바스크립트가 그것을 다룰 수 있도록 object 로 바꿔주는 기능
+object 를 string 으로 전환하거나
+string 을 object 로 전환 해 줄 수 있다.
+
+forEach 는 기본적으로 함수를 실행한다.
+array 에 담겨있는 것들을 각가에 한번 씩 함수를 실행시켜준다.
