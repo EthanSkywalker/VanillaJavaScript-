@@ -15,7 +15,7 @@ function saveToDos(){
 }
 
 function paintToDo(text){
-   const li = document.createElement("li"); //li 라는 태그를 만드는 자바스크립트
+   const li = document.createElement("li");                 // li 라는 태그를 만드는 자바스크립트
    const delBtn = document.createElement("button");
    const newId = toDos.length + 1;
    delBtn.value = "❌"
@@ -40,15 +40,15 @@ function handleSubmit(event){
     event.preventDefault();
     const currenValue = toDoInput.value
     paintToDo(currenValue);
-    toDoInput.value = ""; // inputValue 값이 span.innerText 로
+    toDoInput.value = "";                               // inputValue 값이 span.innerText 로
 }
 
 function loadToDos(){
-    const loadedToDos = localStorage.getItem(TODOS_LS); //저장한 localStorage 에 있는 key 값을 불러옴.
+    const loadedToDos = localStorage.getItem(TODOS_LS); // 저장한 localStorage 에 있는 key 값을 불러옴.
     if(loadedToDos !== null){
-        const parsedToDos = JSON.parse(loadedToDos);    //String 데이터를 Object 로 변경 하는 JSON.parse 적용.
-        parsedToDos.forEach(function(toDo){ //item 즉 parsedToDos 의 값이 toDo 에 담김
-            paintToDo(toDo.text);  //해당 item 의 text 값을 가져옴.
+        const parsedToDos = JSON.parse(loadedToDos);    // String 데이터를 Object 로 변경 하는 JSON.parse 적용.
+        parsedToDos.forEach(function(toDo){             // item 즉 parsedToDos 의 값이 toDo 에 담김
+            paintToDo(toDo.text);                       // 해당 item 의 text 값을 가져옴.
         })
     }
 }
